@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faculty Feedback Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="feedback-body">
+
+    <!-- TOP NAVIGATION -->
+    <nav class="feedback-navbar">
+
+        <div class="brand">
+            <div class="brand-icon">F</div>
+            <div>
+                <h2>Faculty Feedback</h2>
+                <p>STUDENT PORTAL</p>
+            </div>
+        </div>
+
+        <a href="student-dashboard.html" class="back-link">
+            ← Back to Dashboard
+        </a>
+
+    </nav>
+
+
+    <main class="feedback-container">
+
+        <!-- PAGE HEADING -->
+        <div class="feedback-page-heading">
+
+            <span class="tag">ACADEMIC FEEDBACK</span>
+
+            <h1>Faculty Feedback Form</h1>
+
+            <p>
+                Your honest feedback helps improve teaching
+                quality and the learning experience.
+            </p>
+
+        </div>
+
+
+        <!-- SUBJECT INFORMATION -->
+        <section class="feedback-info-card">
+
+            <div>
+                <small>SUBJECT</small>
+                <h3 id="subjectName">Object Oriented Programming</h3>
+                <p id="subjectCode">CS302</p>
+            </div>
+
+            <div>
+                <small>FACULTY MEMBER</small>
+                <h3 id="facultyName">Prof. Faculty Two</h3>
+                <p>Faculty Feedback</p>
+            </div>
+
+            <span class="anonymous-label">
+                🔒 Anonymous
+            </span>
+
+        </section>
+
+
+        <!-- RATING INSTRUCTIONS -->
+        <section class="rating-instructions">
+
+            <h3>Rating Instructions</h3>
+
+            <p>
+                Rate your faculty member based on the following
+                eight parameters. Select one rating for each.
+            </p>
+
+            <div class="rating-scale">
+
+                <span>0 - Poor</span>
+                <span>4 - Satisfactory</span>
+                <span>8 - Excellent</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEEDBACK FORM -->
+        <form id="feedbackForm">
+
+            <div id="questionsContainer">
+
+                <!-- P1 -->
+                <div class="question-card">
+                    <h3>P1. Create interest in the subject</h3>
+                    <p>Does the faculty member create interest in the subject?</p>
+
+                    <div class="rating-options" data-parameter="P1"></div>
+                </div>
+
+
+                <!-- P2 -->
+                <div class="question-card">
+                    <h3>P2. Providing sufficient information</h3>
+                    <p>Does the faculty member cover all topics as per the syllabus?</p>
+
+                    <div class="rating-options" data-parameter="P2"></div>
+                </div>
+
+
+                <!-- P3 -->
+                <div class="question-card">
+                    <h3>P3. Accomplishment of course objectives</h3>
+                    <p>Are the course objectives and concepts properly covered?</p>
+
+                    <div class="rating-options" data-parameter="P3"></div>
+                </div>
+
+
+                <!-- P4 -->
+                <div class="question-card">
+                    <h3>P4. Practical aspects and applications</h3>
+                    <p>Does the faculty member explain practical aspects and applications?</p>
+
+                    <div class="rating-options" data-parameter="P4"></div>
+                </div>
+
+
+                <!-- P5 -->
+                <div class="question-card">
+                    <h3>P5. Communication skills</h3>
+                    <p>How effectively does the faculty member communicate?</p>
+
+                    <div class="rating-options" data-parameter="P5"></div>
+                </div>
+
+
+                <!-- P6 -->
+                <div class="question-card">
+                    <h3>P6. Encourage questioning</h3>
+                    <p>Does the faculty member encourage students to ask questions?</p>
+
+                    <div class="rating-options" data-parameter="P6"></div>
+                </div>
+
+
+                <!-- P7 -->
+                <div class="question-card">
+                    <h3>P7. Punctuality</h3>
+                    <p>Does the faculty member maintain punctuality?</p>
+
+                    <div class="rating-options" data-parameter="P7"></div>
+                </div>
+
+
+                <!-- P8 -->
+                <div class="question-card">
+                    <h3>P8. Organization of assignments and tests</h3>
+                    <p>How well are assignments, class tests, quizzes and seminars organized?</p>
+
+                    <div class="rating-options" data-parameter="P8"></div>
+                </div>
+
+            </div>
+
+
+            <!-- OPTIONAL COMMENT -->
+            <section class="comment-card">
+
+                <h3>Additional Comments (Optional)</h3>
+
+                <p>
+                    Share any suggestions that could help
+                    improve the teaching and learning experience.
+                </p>
+
+                <textarea
+                    id="feedbackComment"
+                    placeholder="Write your suggestions here..."
+                    rows="5"
+                    maxlength="1000"
+                ></textarea>
+
+            </section>
+
+
+            <!-- SUBMIT -->
+            <div class="feedback-actions">
+
+                <a href="student-dashboard.html" class="cancel-btn">
+                    Cancel
+                </a>
+
+                <button type="submit" class="review-btn">
+                    Review Feedback →
+                </button>
+
+            </div>
+
+            <p id="feedbackMessage"></p>
+
+        </form>
+
+
+        <!-- REVIEW SECTION -->
+        <section id="reviewSection" class="review-card" hidden>
+
+            <h2>Review Your Feedback</h2>
+
+            <p>Please check your ratings before final submission.</p>
+
+            <div id="reviewDetails"></div>
+
+            <div class="feedback-actions">
+
+                <button id="editFeedback" class="cancel-btn">
+                    Go Back & Edit
+                </button>
+
+                <button id="confirmFeedback" class="review-btn">
+                    Confirm & Submit
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUCCESS SECTION -->
+        <section id="successSection" class="success-card" hidden>
+
+            <div class="success-icon">✓</div>
+
+            <h2>Feedback Submitted!</h2>
+
+            <p>
+                Thank you for sharing your feedback.
+                Your response has been recorded in this demo.
+            </p>
+
+            <a href="student-dashboard.html" class="review-btn">
+                Return to Dashboard →
+            </a>
+
+        </section>
+
+
+        <footer class="dashboard-footer">
+            © 2026 Faculty Feedback System
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

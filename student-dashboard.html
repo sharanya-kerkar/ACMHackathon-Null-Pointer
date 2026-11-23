@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | Faculty Feedback</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="brand-icon">F</div>
+            <div>
+                <h3>Faculty Feedback</h3>
+                <small>STUDENT PORTAL</small>
+            </div>
+        </div>
+
+        <p class="menu-heading">MENU</p>
+
+        <nav class="sidebar-menu">
+            <a href="#" class="active">▦ &nbsp; Dashboard</a>
+            <a href="#subjects">▤ &nbsp; My Subjects</a>
+            <a href="#subjects">✎ &nbsp; Feedback</a>
+            <a href="#profile">♙ &nbsp; My Profile</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button id="logoutBtn">↪ &nbsp; Logout</button>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-main">
+
+        <!-- TOPBAR -->
+        <header class="dashboard-topbar">
+
+            <div>
+                <h2>Student Dashboard</h2>
+                <p>Academic Year 2026–27</p>
+            </div>
+
+            <div class="student-mini-profile">
+                <div class="avatar">S</div>
+                <div>
+                    <strong>Student Name</strong>
+                    <small>Computer Engineering</small>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- WELCOME -->
+        <section class="dashboard-welcome">
+
+            <div>
+                <span class="tag">STUDENT PORTAL</span>
+
+                <h1>Welcome back, Student! 👋</h1>
+
+                <p>
+                    Your feedback helps improve the
+                    quality of education.
+                </p>
+            </div>
+
+            <div class="semester-badge">
+                SEMESTER 3
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">▤</div>
+                <p>Total Subjects</p>
+                <h2 id="totalSubjects">6</h2>
+                <small>Including elective</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">✓</div>
+                <p>Completed</p>
+                <h2 id="completedSubjects">3</h2>
+                <small>Feedback submitted</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">◷</div>
+                <p>Pending</p>
+                <h2 id="pendingSubjects">3</h2>
+                <small>Awaiting feedback</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">%</div>
+                <p>Completion</p>
+                <h2 id="completionPercentage">50%</h2>
+                <small>Overall progress</small>
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS -->
+        <section class="progress-card">
+
+            <div class="progress-heading">
+                <div>
+                    <h3>Feedback Progress</h3>
+                    <p>Complete feedback for all your subjects.</p>
+                </div>
+
+                <strong id="progressCount">3 / 6</strong>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <small id="progressText">
+                50% of your feedback has been completed.
+            </small>
+
+        </section>
+
+
+        <!-- SUBJECTS -->
+        <section class="subjects-section" id="subjects">
+
+            <div class="section-heading">
+                <div>
+                    <h2>My Subjects</h2>
+                    <p>View your subjects and submit faculty feedback.</p>
+                </div>
+
+                <span class="subject-count">6 Subjects</span>
+            </div>
+
+
+            <div class="subjects-grid">
+
+                <!-- SUBJECT 1 -->
+                <div class="subject-card" data-subject-code="CS301">
+                    <div class="subject-top">
+                        <span class="subject-code">CS301</span>
+                        <span class="status completed">Submitted</span>
+                    </div>
+
+                    <h3>Data Structures</h3>
+                    <p>Faculty: Dr. Faculty One</p>
+
+                    <button class="subject-btn done" disabled>
+                        Feedback Submitted
+                    </button>
+                </div>
+
+
+                <!-- SUBJECT 2 -->
+                <div class="subject-card" data-subject-code="CS302">
+                    <div class="subject-top">
+                        <span class="subject-code">CS302</span>
+                        <span class="status pending">Pending</span>
+                    </div>
+
+                    <h3>Object Oriented Programming</h3>
+                    <p>Faculty: Prof. Faculty Two</p>
+
+                    <button class="subject-btn"
+                        onclick="startFeedback('CS302')">
+                        Give Feedback →
+                    </button>
+                </div>
+
+
+                <!-- SUBJECT 3 -->
+                <div class="subject-card" data-subject-code="CS303">
+                    <div class="subject-top">
+                        <span class="subject-code">CS303</span>
+                        <span class="status completed">Submitted</span>
+                    </div>
+
+                    <h3>Computer Organization</h3>
+                    <p>Faculty: Prof. Faculty Three</p>
+
+                    <button class="subject-btn done" disabled>
+                        Feedback Submitted
+                    </button>
+                </div>
+
+
+                <!-- SUBJECT 4 -->
+                <div class="subject-card" data-subject-code="MA301">
+                    <div class="subject-top">
+                        <span class="subject-code">MA301</span>
+                        <span class="status pending">Pending</span>
+                    </div>
+
+                    <h3>Engineering Mathematics</h3>
+                    <p>Faculty: Dr. Faculty Four</p>
+
+                    <button class="subject-btn"
+                        onclick="startFeedback('MA301')">
+                        Give Feedback →
+                    </button>
+                </div>
+
+
+                <!-- SUBJECT 5 -->
+                <div class="subject-card" data-subject-code="CS304">
+                    <div class="subject-top">
+                        <span class="subject-code">CS304</span>
+                        <span class="status completed">Submitted</span>
+                    </div>
+
+                    <h3>Database Management Systems</h3>
+                    <p>Faculty: Prof. Faculty Five</p>
+
+                    <button class="subject-btn done" disabled>
+                        Feedback Submitted
+                    </button>
+                </div>
+
+
+                <!-- SUBJECT 6 -->
+                <div class="subject-card" data-subject-code="EL301">
+                    <div class="subject-top">
+                        <span class="subject-code">EL301</span>
+                        <span class="status pending">Pending</span>
+                    </div>
+
+                    <h3>Open Elective</h3>
+                    <p>Faculty: Prof. Faculty Six</p>
+
+                    <button class="subject-btn"
+                        onclick="startFeedback('EL301')">
+                        Give Feedback →
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer class="dashboard-footer">
+            © 2026 Faculty Feedback System
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Feedback System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="brand">
+            <div class="brand-icon">F</div>
+            <div>
+                <h2>Faculty Feedback</h2>
+                <p>COLLEGE MANAGEMENT PORTAL</p>
+            </div>
+        </div>
+
+        <span class="portal-label">STUDENT PORTAL</span>
+    </nav>
+
+    <main class="main-container">
+
+        <section class="welcome-section">
+            <span class="tag">ACADEMIC FEEDBACK SYSTEM</span>
+
+            <h1>Shape better<br>
+                <span>learning experiences.</span>
+            </h1>
+
+            <p>
+                Your voice matters. Share your feedback
+                and help us create a better learning
+                environment for everyone.
+            </p>
+
+            <div class="features">
+                <div>✓ Anonymous feedback</div>
+                <div>✓ Secure access</div>
+                <div>✓ Better education</div>
+            </div>
+        </section>
+
+        <section class="login-card">
+
+            <div class="login-heading">
+                <h2>Welcome back!</h2>
+                <p>Sign in to access your dashboard.</p>
+            </div>
+
+            <form id="loginForm">
+
+                <label for="role">Login as</label>
+                <select id="role" required>
+                    <option value="">Select your role</option>
+                    <option value="student">Student</option>
+                    <option value="faculty">Faculty Member</option>
+                    <option value="hod">Head of Department</option>
+                    <option value="admin">Administrator</option>
+                </select>
+
+                <label for="email">Email address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your college email"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="submit">Sign In →</button>
+
+            </form>
+
+            <p class="security-note">
+                🔒 Your account and feedback are protected.
+            </p>
+
+            <p id="message"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Faculty Feedback System | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

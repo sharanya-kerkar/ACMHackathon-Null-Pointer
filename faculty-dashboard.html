@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faculty Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="faculty-body">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="brand-icon">F</div>
+            <div>
+                <h2>Faculty Feedback</h2>
+                <p>FACULTY PORTAL</p>
+            </div>
+        </div>
+
+        <p class="menu-label">MENU</p>
+
+        <nav class="sidebar-nav">
+            <a href="#overview" class="active">▦ Dashboard</a>
+            <a href="#subjects">▤ My Subjects</a>
+            <a href="#parameters">▥ Feedback Analysis</a>
+            <a href="#comments">✎ Student Comments</a>
+        </nav>
+
+        <button id="facultyLogout" class="logout-btn">
+            ↪ Logout
+        </button>
+
+    </aside>
+
+
+    <main class="faculty-dashboard-main">
+
+        <!-- HEADER -->
+
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Faculty Dashboard</h1>
+                <p>Academic Year 2026–27</p>
+            </div>
+
+            <div class="user-profile">
+                <div class="profile-circle">F</div>
+                <div>
+                    <strong id="facultyDisplayName">
+                        Prof. Faculty Two
+                    </strong>
+                    <p>Faculty Member</p>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- WELCOME -->
+
+        <section class="welcome-card" id="overview">
+
+            <span class="tag">FACULTY PORTAL</span>
+
+            <h1>Welcome back, Faculty! 👋</h1>
+
+            <p>
+                Review your feedback and teaching performance.
+            </p>
+
+            <span class="semester-badge">SEMESTER 3</span>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats-grid faculty-stats">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">▤</div>
+                <p>Total Feedback</p>
+                <h2 id="totalFeedback">0</h2>
+                <small>Responses received</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">✓</div>
+                <p>Average Rating</p>
+                <h2 id="averageRating">0.00</h2>
+                <small>Out of 8</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">▣</div>
+                <p>Subjects</p>
+                <h2 id="facultySubjects">1</h2>
+                <small>Assigned subjects</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">✉</div>
+                <p>Comments</p>
+                <h2 id="totalComments">0</h2>
+                <small>Anonymous comments</small>
+            </div>
+
+        </section>
+
+
+        <!-- SUBJECTS -->
+
+        <section class="faculty-section" id="subjects">
+
+            <div class="section-heading">
+                <div>
+                    <h2>My Subjects</h2>
+                    <p>Feedback reports for your assigned subjects.</p>
+                </div>
+            </div>
+
+            <div id="facultySubjectList" class="faculty-subject-grid">
+
+            </div>
+
+        </section>
+
+
+        <!-- PARAMETER ANALYSIS -->
+
+        <section class="faculty-analysis-card" id="parameters">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Feedback Parameter Analysis</h2>
+                    <p>Average score for each of the eight parameters.</p>
+                </div>
+            </div>
+
+            <div id="parameterChart" class="parameter-chart">
+
+            </div>
+
+        </section>
+
+
+        <!-- COMMENTS -->
+
+        <section class="faculty-analysis-card" id="comments">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Anonymous Student Comments</h2>
+                    <p>Suggestions submitted by students.</p>
+                </div>
+            </div>
+
+            <div id="facultyComments" class="faculty-comments">
+
+            </div>
+
+        </section>
+
+
+        <footer class="dashboard-footer">
+            © 2026 Faculty Feedback System
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
